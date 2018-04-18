@@ -11,3 +11,4 @@ public class IntroSlider extends AppCompatActivity {
         setContentView(R.layout.activity_intro_slider);
     }
 }
+
