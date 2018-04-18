@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Divide_Ibitech.iml" filepath="$PROJECT_DIR$/Divide_Ibitech.iml" />
+      <module fileurl="file://C:\Users\s216100801\StudioProjects\Divide_Ibitech\Divide_Ibitech.iml" filepath="C:\Users\s216100801\StudioProjects\Divide_Ibitech\Divide_Ibitech.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\s216100801\StudioProjects\Divide_Ibitech\app\app.iml" filepath="C:\Users\s216100801\StudioProjects\Divide_Ibitech\app\app.iml" />
     </modules>
   </component>
 </project>
