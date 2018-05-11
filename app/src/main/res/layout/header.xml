@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="160dp"
+    android:background="@color/darkgrey"
+    android:padding="20dp"
+    android:layout_marginTop="0dp"
+    >
+
+<ImageView
+
+    android:id="@+id/pic"
+    android:src="@drawable/aya"
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    />
+
+    <TextView
+        android:id="@+id/igama"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginTop="1dp"
+        android:text="Ayabonga Lufefe Jumba"
+        android:textColor="@color/White"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/mail"
+        android:layout_width="152dp"
+        android:layout_height="25dp"
+        android:text="Ajax.Jumba@gmail.com"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+
+        />
+
+</LinearLayout>
