@@ -1,0 +1,5 @@
+<resources>
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
+    <string name="app_name">DashboardAppFinal</string>
+</resources>

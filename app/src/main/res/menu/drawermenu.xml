@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/profile" android:title="My profile"  android:icon="@drawable/ic_person_black_24dp"/>
+    <item android:id="@+id/reports" android:title="Reports" android:icon="@drawable/report"/>
+    <item android:id="@+id/settings" android:title="Settings" android:icon="@drawable/ic_settings_black_24dp"/>
+    <item
+        android:id="@+id/Ma"
+        android:icon="@drawable/medica"
+        android:title="Medical Aid " />
+    <item android:id="@+id/help" android:title="Help" android:icon="@drawable/help"/>
+    <item android:id="@+id/about" android:title="About" android:icon="@drawable/ic_info_outline_black_24dp"/>
+    <item android:id="@+id/out" android:title="Sign-Out" android:icon="@drawable/out"/>
+</menu>
