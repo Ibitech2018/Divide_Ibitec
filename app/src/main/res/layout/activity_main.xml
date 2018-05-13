@@ -502,22 +502,25 @@
     <android.support.v4.widget.DrawerLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/activity_main"
+        android:id="@+id/drawer"
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:paddingTop="16dp">
         <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/flcontent">
             </FrameLayout>
         <android.support.design.widget.NavigationView
             app:headerLayout="@layout/header"
+            android:id="@+id/nv"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/nv"
+            android:background="@color/White"
+            app:itemTextColor="@color/darkgrey"
+            app:itemIconTint="@color/darkgrey"
             app:menu="@menu/drawermenu"
             android:layout_gravity ="start"
             >
