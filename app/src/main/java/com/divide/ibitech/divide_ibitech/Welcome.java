@@ -73,7 +73,7 @@ getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS );
     }
 
     private void openRegister() {
-        Intent intent = new Intent(this, Register.class);
+        Intent intent = new Intent(this, Request.class);
         startActivity(intent);
     }
     private void openLogin() {

@@ -41,7 +41,7 @@
             />
 
         <EditText
-            android:id="@+id/Lname"
+            android:id="@+id/Surname"
             android:layout_width="322sp"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@id/Lname"
+            android:layout_below="@id/Surname"
             android:layout_marginLeft="20sp"
             android:layout_marginRight="20sp"
             android:layout_marginTop="5sp"

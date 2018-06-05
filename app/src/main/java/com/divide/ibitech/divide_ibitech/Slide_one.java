@@ -21,35 +21,35 @@ public class Slide_one extends AppCompatActivity {
     // Variable to store  data from previous activity//String userID,userCellNo,userMail,userPass,userCPassword;
     //End
     Button nextSlide;
-RadioButton Gender;
-EditText Name,Surname,DateofBirth,Address,Suburb,City,PostalCode;
-String name,surname,date,gender,address,suburb,city,code;
+    RadioButton Gender;
+    EditText Name,Surname,DateOfBirth,Address,Suburb,City,PostalCode;
+    String name,surname,date,gender,address,suburb,city,code;
     AlertDialog.Builder builder;
-   // String url="http://sict-iis.nmmu.ac.za/Ibitech/app/Register.php";
+    // String url="http://sict-iis.nmmu.ac.za/Ibitech/app/Register.php";
     ImageView top;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slide_one);
         Name=(EditText) findViewById(R.id.Fname);
-        Surname=(EditText) findViewById(R.id.Lname);
-        DateofBirth=(EditText) findViewById(R.id.Dob);
+        Surname=(EditText) findViewById(R.id.Surname);
+        DateOfBirth=(EditText) findViewById(R.id.Dob);
         // Gender=(RadioButton) findViewById(R.id.Gender);
         Address=(EditText) findViewById(R.id.address1);
         Suburb=(EditText) findViewById(R.id.suburb);
         City=(EditText) findViewById(R.id.City);
         PostalCode=(EditText) findViewById(R.id.postalCode);
         //retrive  dara from 1st form
-      //  userID = (getIntent().getStringExtra("IDNumber"));
-       // userCellNo = (getIntent().getStringExtra("CellNumber"));
-      //  userMail = (getIntent().getStringExtra("Email_Address"));
-       // userPass = (getIntent().getStringExtra("Password"));
-       // userCPassword = (getIntent().getStringExtra("ConfirmPassword"));
+        //  userID = (getIntent().getStringExtra("IDNumber"));
+        // userCellNo = (getIntent().getStringExtra("CellNumber"));
+        //  userMail = (getIntent().getStringExtra("Email_Address"));
+        // userPass = (getIntent().getStringExtra("Password"));
+        // userCPassword = (getIntent().getStringExtra("ConfirmPassword"));
         //End
 
 
-     //   SharedPreferences preferences= getSharedPreferences("MYP",MODE_PRIVATE);
-     //   String displayLog= preferences.getString("display","");
+        //   SharedPreferences preferences= getSharedPreferences("MYP",MODE_PRIVATE);
+        //   String displayLog= preferences.getString("display","");
 
         nextSlide = findViewById(R.id.btnNext);
 
@@ -99,39 +99,11 @@ String name,surname,date,gender,address,suburb,city,code;
     //Validate user input
     public boolean Validate() {
         boolean valid = true;
-        if (name.isEmpty() || name.length() > 32) {
-            Name.setError("Please Enter Valid Name");
+        if (name.isEmpty() || name.length() > 13) {
+            Name.setError("Please Enter Valid ID Number");
             valid = false;
         }
 
-        if (surname.isEmpty() || surname.length() > 32) {
-            Surname.setError("Please Enter Valid Surname");
-            valid = false;
-        }
-        if (city.isEmpty() || city.length() > 10) {
-            City.setError("Please Enter Valid City");
-            valid = false;
-        }
-
-        if (date.isEmpty() || date.length() > 32) {
-            DateofBirth.setError("Please Enter Valid Date");
-            valid = false;
-        }
-        if (suburb.isEmpty() || suburb.length() > 32) {
-            Suburb.setError("Please Enter Valid Suburb");
-            valid = false;
-        }
-
-
-        if (city.isEmpty() || city.length() > 10) {
-            City.setError("Please Enter Valid City");
-            valid = false;
-        }
-
-        if (code.isEmpty() || code.length() > 10) {
-            PostalCode.setError("Please Enter Valid Postal Code");
-            valid = false;
-        }
 
 
 
@@ -139,12 +111,7 @@ String name,surname,date,gender,address,suburb,city,code;
     }
     public void initialize() {
         //*********Passing data to new variables************
-        name = Name.getText().toString().trim();
-        surname = Surname.getText().toString().trim();
-        address = Address.getText().toString().trim();
-        suburb = Suburb.getText().toString().trim();
-        city = City.getText().toString().trim();
-        code = PostalCode.getText().toString().trim();
+
 
 
 
@@ -177,3 +144,4 @@ String name,surname,date,gender,address,suburb,city,code;
 
 
 }
+
