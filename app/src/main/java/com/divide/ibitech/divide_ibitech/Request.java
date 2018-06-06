@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -25,6 +26,10 @@ public class Request extends AppCompatActivity {
          String dName,p_Name,date;
          EditText DName, PName;
          TextView Date ,tRequest;
+    public  String subject;
+    public  String message;
+    public  String to;
+
     private static final String TAG = "MainActivity";
 
     private TextView mDisplayDate;
@@ -34,6 +39,9 @@ public class Request extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request);
         mDisplayDate = (TextView) findViewById(R.id.Date);
+        message="You have Successfully Requested Medical Device \n You can see the status of Device on the IbetchApp";
+        subject="@NoReply";
+        to="slabiti181@gmail.com";
 
         DName= findViewById(R.id.et_Device);
         PName= findViewById(R.id.tv_Pracitioner);
@@ -42,8 +50,30 @@ public class Request extends AppCompatActivity {
         tRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openDialog();
-            }
+
+                try {
+                    if(to.isEmpty()){
+                        Toast.makeText(Request.this, "You must enter a recipient email", Toast.LENGTH_LONG).show();
+                    }else if(subject.isEmpty()){
+                        Toast.makeText(Request.this, "You must enter a Subject", Toast.LENGTH_LONG).show();
+                    }else if(message.isEmpty()){
+                        Toast.makeText(Request.this, "You must enter a message", Toast.LENGTH_LONG).show();
+                    }else {
+                        //everything is filled out
+                        //send email
+                        new SimpleMail().sendEmail(to, subject, message);
+                        openDialog();
+                    }
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+
+                  }
+
+
+
+
+             }
         });
         //Device name
         DName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
