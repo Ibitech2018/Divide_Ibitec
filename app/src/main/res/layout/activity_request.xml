@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.215" />
 
     <EditText
-        android:id="@+id/et_Device"
+        android:id="@+id/etDevice"
         android:layout_width="wrap_content"
         android:layout_height="41dp"
         android:layout_marginBottom="8dp"
@@ -58,7 +58,7 @@
 
     <TextView
 
-        android:id="@+id/Date"
+        android:id="@+id/Date1"
         android:layout_width="187dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -86,10 +86,10 @@
         android:text="Cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.219"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.846" />
+        app:layout_constraintVertical_bias="0.783" />
 
     <TextView
         android:id="@+id/tRequest"
@@ -105,16 +105,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintHorizontal_bias="0.968"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.85" />
+        app:layout_constraintVertical_bias="0.784" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:layout_marginBottom="0dp"
+        android:layout_height="46dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorPrimary"
         android:orientation="vertical"
@@ -141,7 +140,7 @@
         app:srcCompat="@drawable/icture" />
 
     <EditText
-        android:id="@+id/tv_Pracitioner"
+        android:id="@+id/eet_Pracitioner"
         android:layout_width="175dp"
         android:layout_height="48dp"
         android:layout_marginBottom="8dp"
@@ -157,6 +156,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.498" />
 
+    <ImageButton
+        android:id="@+id/viewR"
+        android:layout_width="111dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="272dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/White"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.925"
+        app:srcCompat="@drawable/eyrerererer"
+        android:layout_marginLeft="272dp" />
+
+    <TextView
+        android:id="@+id/statusRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Status"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.644"
+        tools:layout_editor_absoluteX="283dp"
+        tools:ignore="MissingConstraints" />
 
 
 </android.support.constraint.ConstraintLayout>
