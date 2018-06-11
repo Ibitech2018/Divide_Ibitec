@@ -78,6 +78,118 @@ public class Request extends AppCompatActivity {
         tRequest = findViewById(R.id.tRequest);
 
 
+        adapter = new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_list_item_1,names);
+        sp.setAdapter(adapter);
+        sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position){
+                    case 1:
+                        deviceStatus=""+status;
+
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        Views.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openRequest();;
+            }
+        });
+        tRequest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openRequest();
+            }
+        });
+        tRequest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //everything is filled out
+                //send email
+                new SimpleMail().sendEmail(to, subject, message);
+                next();
+            }
+        });
+
+        mDisplayDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Calendar cal = Calendar.getInstance();
+                int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH);
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialog = new DatePickerDialog(Request.this, android.R.style.Theme_Holo_Light_Dialog_MinWidth, mDateSetListener, year, month, day);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
+        mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                month = month + 1;
+                Log.d(TAG, "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
+
+                String date = month + "/" + day + "/" + year;
+                mDisplayDate.setText(date);
+            }
+        };
+
+    }
+    public void next() {
+        initialize();
+        if (!Validate()) {
+            Toast.makeText(this, "Cannot Proceed Data Missing Or Invalid Data Input", Toast.LENGTH_SHORT).show();
+        } else {
+            openDialog();
+        }
+    }
+    public boolean Validate() {
+        boolean valid = true;
+        if (dName.isEmpty() || dName.length() > 13) {
+            DName.setError("Please Enter Valid Device Name");
+            valid = false;
+        }
+
+        if (p_Name.isEmpty() || p_Name.length() > 10) {
+            PName.setError("Please Enter Practitioner");
+            valid = false;
+        }
+
+        if (date.isEmpty()) {
+            Date.setError("Please Enter Valid CellNumber");
+            valid = false;
+        }
+
+
+
+        return valid;
+    }
+    public void initialize() {
+        //*********Passing data to new variables************
+        dName = DName.getText().toString().trim();
+        p_Name = PName.getText().toString().trim();
+        date = Date.getText().toString().trim();
+
+    }
+
+    public void openDialog() {
+
+        RquestDialog requestDialog = new RquestDialog();
+        requestDialog.show(getSupportFragmentManager(), "requestDialog");
+    }
+    private void openRequest() {
+        Intent intent = new Intent(this, RequestView.class);
+        startActivity(intent);
+    }
 
 
 
@@ -85,4 +197,4 @@ public class Request extends AppCompatActivity {
 
 
     }
-}
+

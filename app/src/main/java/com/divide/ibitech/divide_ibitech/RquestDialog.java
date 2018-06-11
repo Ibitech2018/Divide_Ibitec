@@ -1,3 +1,5 @@
+package com.divide.ibitech.divide_ibitech;
+
 import android.support.v7.app.AppCompatDialogFragment;
 
 /**

@@ -1,4 +1,4 @@
-/**
+package com.divide.ibitech.divide_ibitech; /**
  * Created by s216100801 on 2018/06/11.
  */
 import java.util.Properties;
