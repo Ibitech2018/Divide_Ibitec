@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.app.AppCompatActivity;
@@ -60,7 +61,14 @@ public class Dashboard extends AppCompatActivity {
         tv_Gender.setText(sGender);
         tv_MaritalStatus.setText(sStatus);
         tv_Address.setText(sAddress);
+        LinearLayout device = findViewById(R.id.manageCondition);
 
+     device.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View v) {
+             OpenRequest();
+         }
+     });
         btn_Logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,5 +81,10 @@ public class Dashboard extends AppCompatActivity {
         roundedBitmapDrawable.setCircular(true);
         img_ProfilePic.setImageDrawable(roundedBitmapDrawable);
 
+    }
+
+    private void OpenRequest() {
+        Intent intent = new Intent(this, Request.class);
+        startActivity(intent);
     }
 }
